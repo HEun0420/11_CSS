@@ -14,7 +14,10 @@
         }
 
         /* 
-        부모에 position: 
+        부모에 position: relative와 
+        자신의 position: absolute가 있으면
+        웹 브라우저의 절대 위치가 아니라, 
+        부모의 원점에 대한 상대위치를 의미
         */
         .first{
             width: 300px;
@@ -39,6 +42,97 @@
             top: 100px ;
             left:100px ;
             position:absolute ;
+        }
+
+        /* .first{
+            width: 300px;
+            height: 300px;
+            background: rgb(0, 0, 0);
+            position: absolute;
+        }
+
+        .second{
+            width: 200px;
+            height: 200px;
+            background: rgb(54, 120, 241);
+            top: 50px;
+            left: 50px;
+            position: absolute;
+        }
+
+        .third{
+            width: 100px;
+            height: 100px;
+            background: rgb(234,171,91);
+            top: 100px ;
+            left:100px ;
+            position:absolute ;
+        } */
+
+
+/* visibility 테스트 */
+.vis-test {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .vis-test1 {
+            background: red;
+        }
+
+        .vis-test2 {
+            background: yellow;
+            /* visible : 보이게 한다. default */
+            /* visibility: visible; */
+
+            /* visibility: hidden; */
+            display: none;
+        }
+
+        .vis-test3 {
+            background: green;
+        }
+
+        .wrap {
+            position: relative;
+        }
+
+        .z-test {
+            width: 150px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        /* z-index : 수치가 클수록 화면으로 튀어 나온다. */
+        .z-test1 {
+            background: yellow;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            z-index: 5;
+        }
+
+        .z-test2 {
+            background: green;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 6;
+        }
+
+        .z-test3 {
+            background: red;
+            position: absolute;
+            z-index: 9;
+        }
+
+        .float-test {
+            border: 1px solid black;
+            width: 100px;
+            height: 50px;
+
+            float: right;
         }
 
     </style>
@@ -87,5 +181,10 @@
         <div class="float-test float-test4">444</div>
         <div class="float-test float-test5">555</div>
     </div>
+
+    <br clear="left">
+    <p>float 테스트</p>
+
+
 </body>
 </html>
